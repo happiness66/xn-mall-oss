@@ -1,0 +1,104 @@
+<link rel="import" href="../head.html?__inline">
+<script src="../../js/lib/qrcode.js"></script>
+<script src="../../js/app/store/account.js"></script>
+<style>
+	.account-w{
+		width: 100%;
+		padding: 30px 10px;
+		overflow: hidden;
+	}
+	.account-list-w{
+		width: 400px;
+		float: left;
+		padding: 20px;
+	}
+	.account-list{
+		height: 180px;
+		border: 1px solid #ced9df;
+		padding: 20px;
+		position: relative;
+	}
+	.account-fs{
+		width: 100%;
+		font-size: 15px;
+		line-height: 2;
+	}
+	.account-fs p{
+		display: inline-block;
+		margin-left: 20px;
+	}
+	.account-btn{
+		position: absolute;
+		bottom: 20px;
+		right: 10px;
+	}
+	.account-btn2{
+		position: absolute;
+		bottom: 20px;
+		right: 10px;
+	}
+	.huilv{
+		font-size: 12px;
+		color: red;
+		padding: 10px 0 0 80px;
+	}
+	#btn-0{
+		margin-left: 90px;
+	}
+</style>
+<!--夺宝管理-->
+<div class="place">
+	<span>位置：</span>
+	<ul>
+	</ul>
+</div>
+<!--<div class="right-info">
+	 <form class="search-form">
+	</form>
+	<div class="tools">
+	   <ul class="toolbar">
+	   </ul>
+	</div>
+	<table id="tableList"></table>
+</div>-->
+
+<div class="account-w">
+	<div class="account-list-w">
+		<div class="account-list">
+			<div class="account-fs">账户类型：<p class="account-name">人民币</p></div>
+			<div class="account-fs">账户余额：<p class="account-amount" id="amount-CNY"></p></div>
+			<div class="account-btn">
+				<div class="btn" id="CNYls-Btn">查看流水</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="account-list-w">
+		<div class="account-list">
+			<div class="account-fs">账户类型：<p class="account-name">菜狗币</p></div>
+			<div class="account-fs">账户余额：<p class="account-amount" id="amount-CGB"></p></div>
+			
+			<div class="account-btn">
+				<div class="btn" id="CGBls-Btn">查看流水</div>
+				<div class="btn" id="purchaseBtn-CGB">采购</div>
+				<div class="btn" id="saleBtn">售卖</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div class="account-list-w">
+		<div class="account-list">
+			<div class="account-fs">账户类型：<p class="account-name">抵金券</p></div>
+			<div class="account-fs">账户余额：<p class="account-amount" id="amount-JF"></p></div>
+			
+			<div class="account-btn">
+				<div class="btn" id="CGJFls-Btn">查看流水</div>
+				<div class="btn" id="purchaseBtn-JF">币转抵金券</div>
+				<div class="btn" id="grantBtn">发放</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<link rel="import" href="../foot.html?__inline">
